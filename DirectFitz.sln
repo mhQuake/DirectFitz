@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DirectFitz", "DF\DirectFitz.vcproj", "{F730A472-9BD0-4057-9F59-70C11EE4C9C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_D3D9|Win32 = Debug_D3D9|Win32
+		Debug_OpenGL|Win32 = Debug_OpenGL|Win32
+		Release_D3D9|Win32 = Release_D3D9|Win32
+		Release_OpenGL|Win32 = Release_OpenGL|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F730A472-9BD0-4057-9F59-70C11EE4C9C4}.Debug_D3D9|Win32.ActiveCfg = Debug_D3D9|Win32
+		{F730A472-9BD0-4057-9F59-70C11EE4C9C4}.Debug_D3D9|Win32.Build.0 = Debug_D3D9|Win32
+		{F730A472-9BD0-4057-9F59-70C11EE4C9C4}.Debug_OpenGL|Win32.ActiveCfg = Debug_OpenGL|Win32
+		{F730A472-9BD0-4057-9F59-70C11EE4C9C4}.Debug_OpenGL|Win32.Build.0 = Debug_OpenGL|Win32
+		{F730A472-9BD0-4057-9F59-70C11EE4C9C4}.Release_D3D9|Win32.ActiveCfg = Release_D3D9|Win32
+		{F730A472-9BD0-4057-9F59-70C11EE4C9C4}.Release_D3D9|Win32.Build.0 = Release_D3D9|Win32
+		{F730A472-9BD0-4057-9F59-70C11EE4C9C4}.Release_OpenGL|Win32.ActiveCfg = Release_OpenGL|Win32
+		{F730A472-9BD0-4057-9F59-70C11EE4C9C4}.Release_OpenGL|Win32.Build.0 = Release_OpenGL|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

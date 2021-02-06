@@ -1,0 +1,80 @@
+2017-01-21
+- Implemented optimizations and sanity-checking in Mod_LoadLighting (#ifdef MOD_LOAD_LIGHTING_IS_INSANE).
+- Added #ifdef RGB_2X_IS_NOT_ENOUGH stuff - With 2x RGB scale some lighting situations still clamp to 255 (yes, even in ID1) so we need to expand to 4x;
+  Surfs only because MDLs are good enough.  Take note of https://www.opengl.org/sdk/docs/man2/xhtml/glTexEnv.xml
+  "GL_INVALID_VALUE is generated if the params value for GL_RGB_SCALE or GL_ALPHA_SCALE are not one of 1.0, 2.0, or 4.0."
+- Added mipmapping for MDLs and SPRs because they really look bad (#ifdef NO_MIPMAPPING_LOOKS_BAD).
+
+2017-01-20
+- Added quakedef.c and precompiled header on .c files; some structural changes to support PCH generation.
+
+2017-01-18
+- Updated waterwarp code for latest vkQuake changes.
+- Tweaked waterwarp code for consistency with mankrip's tests.
+- Added cvars for CYCLE and AMP.
+
+2017-01-17
+- Added #ifdef TXGAMMA stuff.
+
+2017-01-16
+- Added HOST_TIMER_FIX stuff to engine because FitzQuake's timer problems were really starting to annoy me.
+- Added guards to GL_BeginRendering against GetClientRect failing or trying to use a 0-width/0-height mode.
+- Fixed color 255 is not fullbright (#ifdef COLOR_255_IS_NOT_FULLBRIGHT).
+- Fixed sky polygons are failing to batch (#ifdef FITZQUAKE_SKY_GIVES_ME_FITS).
+- Implemented enough of alphamask textures to test functionality (#ifdef ALPHAMASK_TEXTURES).
+- Fixed alpha mask textures with correct default states for GL combine modes.
+
+2017-01-14
+- Made GL_NEAREST texture modes take priority over anisotropic filtering.
+- Possible performance improvement in mipmap generation.
+- Mipmap generation optimization in TexMgr_LoadImage32.
+- Overrides for ChoosePixelFormat and DescribePixelFormat.
+- Fixed off-by-1 crap in gamma/contrast pass.
+
+2017-01-13
+- Added new code to GL_BeginRendering to deal with viewport/rendertarget size mismatch.
+- Fixed GL combine and add not being reported on PS 2.0 hardware.
+
+2017-01-12
+- Fixed glClear behaviour to more correctly emulate OpenGL behaviour.
+- Fixed Alt-tab loses warp images and occasional device reset fail.
+
+2017-01-10
+- Added #ifdef FIX_CONSPEED stuff.
+- Validate window dimensions for windowed modes to prevent setting modes >= the desktop work area (currently #if'ed out).
+
+2017-01-01
+- Completed addition of Quake III shadow volume code.
+
+2016-12-28
+- Fixed vsync not being "sticky" across mode changes
+- Changed interface to all GL functions to same as is used by Baker; added "API glue" layer.
+- Added more robust extensions enumeration.
+- Fixed up annoying GL crap in glTexImage.
+- Fixed up WGL interface for consistency with main GL interface.
+
+2016-12-27
+- Sick
+
+2016-12-26
+- Sick
+
+2016-12-25
+- Removed support for < 32 bpp modes.
+- Fixed several problems relating to starting in a fullscreen mode.
+- Improved context startup and shutdown for conformance with DXGI requirements on Vista+.
+- Cleaned up present params creation for D3D8/9 differences.
+- Wrapped EnumDisplaySettings and fixed up wrapping of ChangeDisplaySettings.
+
+2016-12-24
+- Added stencil ahadows as a test case for the stencil buffer stuff.
+- Fixed up some EXTRA_DLIGHTS stuff - powerup lights and (some) muzzleflash colours.
+
+2016-12-23
+- Extended "#define VIEW_TIMER_CORRECTION" stuff to support cshift drops properly.
+- Corrected support for > 32 dynamic lights.
+- Fixed missing enable/disable for stencil test.
+- Added GL_ARB_texture_non_power_of_two.
+
+2016-12-22
+- Initial release
